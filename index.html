@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>시디즈 쇼핑몰</title>
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- html5shive -->
+    <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <![endif]-->
+    <!-- prefixfree -->
+    <script type="text/javascript" src="js/prefixfree.min.js"></script>
+    <!-- Swiper 슬라이드 -->
+    <link rel="stylesheet" href="js/swiper/swiper.min.css">
+    <script src="js/swiper/swiper.min.js"></script>
+    <!-- normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <!-- 모달창 -->
+    <div class="modal">
+        <div class="modal-cont">
+            <i class="fas fa-exclamation alert"></i>
+            <p class="modal-tit">이 사이트는 스터디용으로 제작되었으며<br>
+                리소스는 원저작자에게 있습니다</p>
+            <p class="modal-txt">본 사이트는 Chrome에 최적화 되어있습니다</p>
+            <button class="modal-close">
+                CLOSE
+            </button>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="fixed-menu">
+            <a href="#"><img src="images/store.svg"><span>매장찾기</span></a>
+            <a href="#"><img src="images/kakao.svg"><span>챗봇문의</span></a>
+        </div>
+        <!-- 상단 -->
+        <header class="header">
+            <div class="header-top">
+                <div class="empty left"></div>
+                <div class="search left">
+                    <form>
+                        <input type="text" class="search-box"> <a href="#" class="search-btn">SEARCH</a>
+                    </form>
+                </div>
+                <div class="login right clearfix">
+                    <ul class="login-menu">
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><span class="icon-compare"><img src="images/compare.png"></span><a href="#">비교하기</a></li>
+                        <li><span class="icon-cart"><img src="images/cart.png"></span><a href="#">장바구니</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <div class="pagew clearfix">
+                    <a href="#" class="logo left">
+                        <img src="images/logo.png" alt="sidiz">
+                    </a>
+                    <ul class="menu right">
+                        <li>ABOUT SIDIZ</li>
+                        <ul class="depth1">
+                            <li><a href="#">BRAND SROTY</a></li>
+                            <li><a href="#">NEWS</a></li>
+                            <li>특별관</li>
+                            <li><a href="#">월간윤종신</a></li>
+                            <li><a href="#">기대요 프로젝트</a></li>
+                            <li><a href="#">T50 10주년</a></li>
+                        </ul>
+                        <li>PRODUCTS</li>
+                        <dl class="depth2 clearfix">
+                            <dt class="depth2-tit"><span>모든 제품보기</span></dt>
+                            <dd class="depth2-txt"><span>SMART FINDER</span></dd>
+                            <dt class="depth2-tit"><span>모든 제품보기</span></dt>
+                            <dd class="depth2-txt"><a href="#">마블</a></dd>
+                            <dd class="depth2-txt"><a href="#">디즈니</a></dd>
+                            <dt class="depth2-tit"><a href="#">마블x시디즈 태스크</a></dt>
+                            <dd class="depth2-txt"><a href="#">T80</a></dd>
+                            <dd class="depth2-txt"><a href="#">T50</a></dd>
+                            <dt class="depth2-tit"><a href="#">디즈니x시디즈 키즈</a></dt>
+                            <dd class="depth2-txt"><a href="#">atti</a></dd>
+                            <dd class="depth2-txt"><a href="#">ringo cover</a></dd>
+                            <dt class="depth2-tit"><a href="#">사무용의자</a></dt>
+                            <dd class="depth2-txt"><a href="#">T80</a></dd>
+                            <dd class="depth2-txt"><a href="#">T55</a></dd>
+                            <dd class="depth2-txt"><a href="#">T50 AIR</a></dd>
+                            <dd class="depth2-txt"><a href="#">T50</a></dd>
+                            <dd class="depth2-txt"><a href="#">T40</a></dd>
+                            <dd class="depth2-txt"><a href="#">T25</a></dd>
+                            <dd class="depth2-txt"><a href="#">TAB PLUS</a></dd>
+                            <dt class="depth2-tit"><a href="#">학생용의자</a></dt>
+                            <dd class="depth2-txt"><a href="#">ringo</a></dd>
+                            <dd class="depth2-txt"><a href="#">mitto</a></dd>
+                            <dd class="depth2-txt"><a href="#">ible</a></dd>
+                            <dd class="depth2-txt"><a href="#">T25</a></dd>
+                            <dd class="depth2-txt"><a href="#">T50</a></dd>
+                            <dt class="depth2-tit"><a href="#">유아용의자</a></dt>
+                            <dd class="depth2-txt"><a href="#">molti</a></dd>
+                            <dd class="depth2-txt"><a href="#">atti</a></dd>
+                            <dt class="depth2-tit"><a href="#">중역용의자</a></dt>
+                            <dd class="depth2-txt"><a href="#">PRONARD</a></dd>
+                            <dd class="depth2-txt"><a href="#">VESTO</a></dd>
+                            <dd class="depth2-txt"><a href="#">CELIOS</a></dd>
+                            <dd class="depth2-txt"><a href="#">NUO</a></dd>
+                            <dt class="depth2-tit"><a href="#">회의실/컨퍼런스의자</a></dt>
+                            <dd class="depth2-txt"><a href="#">T50 side</a></dd>
+                            <dd class="depth2-txt"><a href="#">T40 side</a></dd>
+                            <dd class="depth2-txt"><a href="#">T30 side</a></dd>
+                            <dd class="depth2-txt"><a href="#">LOLLY</a></dd>
+                            <dd class="depth2-txt"><a href="#">NOOI</a></dd>
+                            <dd class="depth2-txt"><a href="#">MO2</a></dd>
+                            <dt class="depth2-tit"><a href="#">인테리어의자</a></dt>
+                            <dd class="depth2-txt"><a href="#">BUTTON</a></dd>
+                            <dd class="depth2-txt"><a href="#">SPOON</a></dd>
+                            <dd class="depth2-txt"><a href="#">MANE</a></dd>
+                            <dd class="depth2-txt"><a href="#">EGA</a></dd>
+                            <dd class="depth2-txt"><a href="#">M06</a></dd>
+                            <dt class="depth2-tit"><a href="#">스툴/좌식의자</a></dt>
+                            <dd class="depth2-txt"><a href="#">FUNGUS</a></dd>
+                            <dd class="depth2-txt"><a href="#">PILLO</a></dd>
+                            <dd class="depth2-txt"><a href="#">M17</a></dd>
+                            <dd class="depth2-txt"><a href="#">M05</a></dd>
+                            <dd class="depth2-txt"><a href="#">M06</a></dd>
+                            <dt class="depth2-tit"><a href="#">액세서리</a></dt>
+                            <dd class="depth2-txt"><a href="#">headrest</a></dd>
+                            <dd class="depth2-txt"><a href="#">hanger</a></dd>
+                            <dd class="depth2-txt"><a href="#">cover-cushion</a></dd>
+                            <dd class="depth2-txt"><a href="#">caster-glide</a></dd>
+                            <dd class="depth2-txt"><a href="#" class="last-me">footrest</a></dd>
+                        </dl>
+                        <li>SUPPORT</li>
+                        <ul class="depth3">
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">친절상담</a></li>
+                            <li><a href="#">A/S 신청</a></li>
+                            <li><a href="#">A/S 안내</a></li>
+                            <li><a href="#">매장 찾기</a></li>
+                            <li><a href="#">품질 보증 서비스</a></li>
+                            <li><a href="#">제품설명서 다운로드</a></li>
+                            <li><a href="#">카탈로그 다운로드</a></li>
+                            <li><a href="#">사업제안</a></li>
+                            <li><a href="#">대리점 개설문의</a></li>
+                            <li><a href="#">대량 구매 문의</a></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- //상단 -->
+        <!-- 비주얼 -->
+        <section class="visual">
+            <div class="pagew">
+                <div class="swiper-container sw-visual">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="visual-slide">
+                                <div class="visual-slide-left left">
+                                    <p class="visual-tit">
+                                        의자 위 인생은<br>
+                                        진행중
+                                    </p>
+                                    <span class="visual-name">SIDIZ</span>
+                                    <span class="visual-more">
+                                        <span>
+                                            <a href="#">
+                                                <i class="play-btn"><img src="images/outlinkPlay.svg"></i>
+                                                <img src="images/visual_more1.png">
+                                            </a>
+                                        </span>
+                                        <a href="#" class="visual-subtxt">
+                                            브랜드 캠페인 영상<br>
+                                            바로가기
+                                        </a>
+                                    </span>
+                                </div>
+                                <div class="visual-slide-right left">
+                                    <img src="images/slide1.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="visual-slide">
+                                <div class="visual-slide-left left">
+                                    <p class="visual-tit">
+                                        의자 위 인생은<br>
+                                        진행중
+                                    </p>
+                                    <span class="visual-name">SIDIZ</span>
+                                    <span class="visual-more">
+                                        <span><i class="play-btn"><img src="images/outlinkPlay.svg"></i><img src="images/visual_more1.png"></span>
+                                        브랜드 캠페인 영상<br>
+                                        바로가기
+                                    </span>
+                                </div>
+                                <div class="visual-slide-right left">
+                                    <img src="images/slide2.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="visual-slide">
+                                <div class="visual-slide-left left">
+                                    <p class="visual-tit">
+                                        의자 위 인생은<br>
+                                        진행중
+                                    </p>
+                                    <span class="visual-name">SIDIZ</span>
+                                    <span class="visual-more">
+                                        <span><i class="play-btn"><img src="images/outlinkPlay.svg"></i><img src="images/visual_more1.png"></span>
+                                        브랜드 캠페인 영상<br>
+                                        바로가기
+                                    </span>
+                                </div>
+                                <div class="visual-slide-right left">
+                                    <img src="images/slide3.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="visual-slide">
+                                <div class="visual-slide-left left">
+                                    <p class="visual-tit">
+                                        의자 위 인생은<br>
+                                        진행중
+                                    </p>
+                                    <span class="visual-name">SIDIZ</span>
+                                    <span class="visual-more">
+                                        <span><i class="play-btn"><img src="images/outlinkPlay.svg"></i><img src="images/visual_more1.png"></span>
+                                        브랜드 캠페인 영상<br>
+                                        바로가기
+                                    </span>
+                                </div>
+                                <div class="visual-slide-right left">
+                                    <img src="images/slide4.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="visual-slide">
+                                <div class="visual-slide-left left">
+                                    <p class="visual-tit">
+                                        의자 위 인생은<br>
+                                        진행중
+                                    </p>
+                                    <span class="visual-name">SIDIZ</span>
+                                    <span class="visual-more">
+                                        <span><i class="play-btn"><img src="images/outlinkPlay.svg"></i><img src="images/visual_more1.png"></span>
+                                        브랜드 캠페인 영상<br>
+                                        바로가기
+                                    </span>
+                                </div>
+                                <div class="visual-slide-right left">
+                                    <img src="images/slide5.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prevnext">
+                        <a href="#" class="sw-visual-prev">
+                            <img src="images/prevBr.png">
+                        </a>
+                        <a href="#" class="sw-visual-next">
+                            <img src="images/nextBr.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //비주얼 -->
+        <!-- item -->
+        <section class="item">
+            <div class="pagew clearfix">
+                <div class="left-item-wrap left">
+                    <div class="left-item">
+                        <span class="left-title">TASK CHAIR</span>
+                        <div class="left-item">
+                            <a href="#"><img src="images/t80.jpg" alt="제품"></a>
+                            <span class="item-name">T80</span>
+                            <span class="item-txt">ULTIMATE CHAIR</span>
+                        </div>
+                    </div>
+                    <div class="left-item">
+                        <a href="#"><img src="images/tabplus.jpg" alt="제품"></a>
+                        <span class="item-name">TAB PLUS</span>
+                        <span class="item-txt">혼자서도 손쉽게</span>
+                    </div>
+                </div>
+                <div class="right-item-wrap right">
+                    <a href="#"><span class="all-product right">ALL PRODUCTS</span></a>
+                    <div class="right-item">
+                        <a href="#"><img src="images/t50.jpg" alt="제품"></a>
+                        <span class="item-name">T50</span>
+                        <span class="item-txt">좋은 의자의 기본</span>
+                    </div>
+                    <div class="right-item">
+                        <a href="#"><img src="images/t40.jpg" alt="제품"></a>
+                        <span class="item-name">T40</span>
+                        <span class="item-txt">꼭 필요한 기능만</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //item -->
+        <!-- kids chair -->
+        <section class="kids-chair">
+            <div class="pagew">
+                <div class="kids-item">
+                    <div class="kids-top">
+                        <span class="kids-title left">KIDS CHAIR</span>
+                        <a href="#"><span class="all-product right">ALL PRODUCT</span></a>
+                    </div>
+                    <div class="kids-good clearfix">
+                        <div class="good-box g1 left">
+                            <a href="#"><img src="images/kidsitem1.jpg" alt="제품"></a>
+                            <span class="item-name">molti</span>
+                            <span class="item-txt">앉음마부터 좋은 자세로</span>
+                        </div>
+                        <div class="good-box g2">
+                            <a href="#"><img src="images/kidsitem2.jpg" alt="제품"></a>
+                            <span class="item-name">atti</span>
+                            <span class="item-txt">플레이 체어</span>
+                        </div>
+                        <div class="good-box g3 right">
+                            <a href="#"><img src="images/kidsitem3.jpg" alt="제품"></a>
+                            <span class="item-name">ringo</span>
+                            <span class="item-txt">생각이 자라는 의자</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //kids chair -->
+        <!-- 뉴스 -->
+        <section class="news">
+            <div class="pagew">
+                <div class="news-menu clearfix">
+                    <span class="news-menu-tit left">NEWS</span>
+                    <div class="news-menu-right-wrap clearfix">
+                        <a href="#" class="rule left">시디즈 이용약관 및 개인정보 처리방침 개정 사전안내</a>
+                        <span class="date ">2021.03.23</span>
+                    </div>
+                    <a href="#" class="all-view">전체보기</a>
+                </div>
+                <div class="event-wrap">
+                    <a href="#" class="official">
+                        <img src="images/event.png">@sidiz_official
+                    </a>
+                    <div class="event-list clearfix">
+                        <a href="#" class="event-image"><img src="images/event1.jpg"></a>
+                        <a href="#" class="event-image"><img src="images/event2.jpg"></a>
+                        <a href="#" class="event-image"><img src="images/event3.jpg"></a>
+                        <a href="#" class="event-image"><img src="images/event4.jpg"></a>
+                        <a href="#" class="event-image"><img src="images/event5.jpg"></a>
+                    </div>
+                </div>
+                <div class="choice-tip-wrap clearfix">
+                    <div class="choice-tip-left left">
+                        <span class="blog"><img src="images/blog.png"></span>
+                        <span class="choice-tip-title">CHAIR CHOICE TIP</span>
+                        <h2>나에게 꼭 맞는 퍼스널
+                            <br>
+                            체어 선택 Tip 3
+                        </h2>
+                        <p>
+                            현대인의 고질병 중 하나인 허리 통증. 연령과 성별을 불문하고 나타나는 증상입니다. 직장인들의 경우 10명 중 4명 이상이 허리 통증으로 고통받고 있다고 합니다. 이를 해결할 수 있는...
+                        </p>
+                        <a href="#">LEARN MORE</a>
+                    </div>
+                    <div class="choice-tip-right right">
+                        <a href="#">
+                            <img src="images/eventimage.jpg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //뉴스 -->
+        <!-- 하단 -->
+        <footer class="footer">
+            <div class="pagew">
+                <div class="footer-wrap">
+                    <div class="footer-top clearfix">
+                        <span class="logo-foot"><img src="images/logo-foot.svg"></span>
+                        <div class="sns right">
+                            <a href="#"><img src="images/fbicon.svg"></a>
+                            <a href="#" class="insta"><img src="images/instaicon.svg"></a>
+                            <a href="#"><img src="images/blogicon.svg"></a>
+                        </div>
+                    </div>
+                    <div class="footer-bot clearfix">
+                        <div class="footer-bot-wrap left clearfix">
+                            <div class="footer-left1 left">
+                                <p class="copy">
+                                    Copyright (c) 2019 SIDIZ, INC.
+                                    <br>
+                                    All rights reserved.
+                                </p>
+                                <span class="sidiz">
+                                    (주)시디즈
+                                </span>
+                                <span>
+                                    대표이사 · 이상배
+                                    <br>
+                                    경기도 평택시 세교산단로 67-20 (세교동)
+                                </span>
+                                <span>
+                                    사업자등록번호 · 215-87-48121
+                                    <br>
+                                    통신판매신고번호 · 2018-경기평택-0099
+                                    <br>
+                                    부가통신사업신고필증 · 022094
+                                </span>
+                                <span>
+                                    FAX · 02-3400-4800
+                                    <br>
+                                    개인정보관리책임자 · 이상배 I sidiz_official@fursys.com
+                                </span>
+                                <a href="#" class="spc">
+                                    <img src="images/spclogo.png">
+                                    에스크로 가입사실 확인
+                                </a>
+                            </div>
+                            <div class="footer-left2 left">
+                                <a href="#"><span>이용약관</span></a>
+                                <span>투자정보</span>
+                                <a href="#"><span>공고·IR</span></a>
+                                <span>A/S문의</span>
+                                <a href="#"><span>챗봇문의</span></a>
+                            </div>
+                            <div class="footer-left3 left">
+                                <a href="#"><span class="foot-info">개인정보처리방침</span></a>
+                                <span class="about">ABOUT SIDIZ</span>
+                                <a href="#"><span class="brand-story">BRAND STORY</span></a>
+                                <a href="#"><span class="foot-news">NEWS</span></a>
+                            </div>
+                            <div class="footer-left4 left">
+                                <span class="foot-list-title">제품</span>
+                                <a href="#"><span class="foot-list">마블x시디즈 태스크</span></a>
+                                <a href="#"><span class="foot-list">디즈니x시디즈 키즈</span></a>
+                                <a href="#"><span class="foot-list">사무용의자</span></a>
+                                <a href="#"><span class="foot-list">학생용의자</span></a>
+                                <a href="#"><span class="foot-list">유아용의자</span></a>
+                                <a href="#"><span class="foot-list">중역용의자</span></a>
+                                <a href="#"><span class="foot-list">회의실/컨퍼런스의자</span></a>
+                                <a href="#"><span class="foot-list">인테리어의자</span></a>
+                                <a href="#"><span class="foot-list">스툴/좌식의자</span></a>
+                                <a href="#"><span class="foot-list">액세서리</span></a>
+                            </div>
+                            <div class="footer-left5 left">
+                                <span class="foot-list-title">고객센터</span>
+                                <a href="#"><span class="foot-list">FAQ</span></a>
+                                <a href="#"><span class="foot-list">친절상담</span></a>
+                                <a href="#"><span class="foot-list">A/S신청</span></a>
+                                <a href="#"><span class="foot-list">A/S안내</span></a>
+                                <a href="#"><span class="foot-list">매장 찾기</span></a>
+                                <a href="#"><span class="foot-list">품질 보증 서비스</span></a>
+                                <a href="#"><span class="foot-list">제품설명서 다운로드</span></a>
+                                <a href="#"><span class="foot-list">카탈로그 다운로드</span></a>
+                                <a href="#"><span class="foot-list">시디즈 서비스</span></a>
+                            </div>
+                            <div class="footer-left6 left">
+                                <span class="foot-list-title">친절상담</span>
+                                <span>1899 - 3176</span>
+                                <span>평일 | 09:30 - 17:30<br><b>*점심시간 | 12:30 - 13:30</b></span>
+                                <span>토요일 | 09:30 - 17:30<br>일요일,공휴일 휴무</span>
+                            </div>
+                        </div>
+                        <div class="footer-right right">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- //하단 -->
+    </div>
+</body>
+
+</html>
